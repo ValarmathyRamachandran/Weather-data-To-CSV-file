@@ -28,6 +28,9 @@ async def main(cities):
         task = asyncio.create_task(get_data(city))
         await task
 
+    # tasks = [cities for cities in city_list]
+    # await asyncio.gather(*tasks)
+
 
 if __name__ == '__main__':
     start_time = time.strftime('%X')
