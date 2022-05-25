@@ -1,17 +1,13 @@
+# sum of natural numbers 
 def natural_num(number):
-    num = 1
-    for num in range(1, number + 1):
-        print(num, end=' ')
-
-
-def natural_num_while(n):
-    while n >= 1:
-        print(n, end='  ')
-        n = n - 1
+    if number <= 1:
+        return number
+    natural = number + natural_num(number - 1)
+    print(natural)
+    return natural
 
 
 if __name__ == "__main__":
-    numbers = int(input("Please Enter any Number: "))
-    natural_num(numbers)
-    print("|")
-    natural_num_while(numbers)
+    num = int(input("enter number:"))
+    n = natural_num(num)
+    print("Sum of natural numbers of ", num, "=", n)
